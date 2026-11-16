@@ -1,0 +1,12 @@
+{
+  "name": "liva-storefront-prototype",
+  "version": "1.0.0",
+  "private": true,
+  "description": "LIVA premium personal care storefront \u2014 HTML, CSS, JavaScript and jQuery frontend prototype",
+  "scripts": {
+    "dev": "python3 -m http.server 4173 --bind 127.0.0.1",
+    "start": "python3 -m http.server 4173 --bind 127.0.0.1",
+    "test": "node --test tests/*.test.cjs",
+    "check": "node --check js/core.js && node --check js/catalog.js && node --check js/commerce.js && node --check js/app.js && node --check js/routine.js && node --check js/hero.js"
+  }
+}
