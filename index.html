@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#faf8f4">
+  <meta name="description"
+    content="The LIVA Daily Edit. Explore hair care, body care and a personal selection of everyday essentials.">
+  <title>LIVA — The Daily Edit</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="preload" href="assets/dm-sans.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/cormorant.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/manrope.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="css/styles.css?v=8">
+  <link rel="stylesheet" href="css/hero.css?v=3">
+  <link rel="stylesheet" href="css/catalog.css?v=19">
+  <link rel="stylesheet" href="css/commerce.css?v=7">
+  <script defer src="assets/jquery-3.7.1.min.js"></script>
+  <script defer src="js/core.js?v=6"></script>
+  <script defer src="js/catalog.js?v=18"></script>
+  <script defer src="js/commerce.js?v=4"></script>
+  <script defer src="js/routine.js?v=6"></script>
+  <script defer src="js/hero.js?v=3"></script>
+  <script defer src="js/app.js?v=11"></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="announcement"><span data-i18n="personalCare">PERSONAL CARE. PERSONALLY YOURS.</span><a
+      href="#routine"><span data-i18n="buildYourShelf">Build your shelf</span> <span
+        aria-hidden="true">↗</span></a><span data-i18n="dailyEdit">THE LIVA DAILY EDIT</span></div>
+  <header class="site-header">
+    <div class="header-inner container">
+      <button class="icon-button mobile-menu-toggle" aria-label="Open menu" aria-expanded="false"
+        aria-controls="mobile-navigation" data-icon="menu"></button>
+      <a href="#home" class="brand" aria-label="LIVA home"><span>LIVA</span><svg viewBox="0 0 130 16"
+          aria-hidden="true">
+          <path d="M3 13C35-12 80 29 127 1C83 39 39-1 3 13Z" fill="currentColor" />
+        </svg></a>
+      <nav class="desktop-nav" aria-label="Main navigation"><a href="#home" data-nav="home" data-i18n="home">Home</a><a
+          href="#shop" data-nav="shop" data-i18n="shopAll">Shop all</a><a href="#shop?category=skin-care"
+          data-i18n="skinCare">Skin Care</a><a href="#shop?category=hair" data-i18n="hair">Hair</a><a
+          href="#shop?category=body" data-i18n="body">Body</a><a href="#shop?category=makeup"
+          data-i18n="makeup">Makeup</a><a href="#shop?category=sets" data-i18n="sets">Sets</a><a href="#routine"
+          data-nav="routine"><span data-i18n="buildYourShelf">Build your shelf</span> <span
+            aria-hidden="true">↗</span></a><a href="#about" data-nav="about" data-i18n="aboutLiva">About LIVA</a></nav>
+      <div class="header-actions">
+        <div class="header-lang-switch" role="group" aria-label="Language selection">
+          <button type="button" class="lang-toggle-btn active" data-lang="en" aria-label="English">EN</button>
+          <button type="button" class="lang-toggle-btn" data-lang="km" aria-label="ភាសាខ្មែរ">ខ្មែរ</button>
+        </div>
+        <button class="icon-button search-toggle" aria-label="Search products" aria-expanded="false"
+          aria-controls="site-search" data-icon="search"></button><a class="icon-button account-link" href="#account"
+          aria-label="My account" data-icon="user"></a><a class="icon-button wishlist-link" href="#wishlist"
+          aria-label="Saved products"><span data-icon="heart"></span><span class="wishlist-count count-badge"
+            hidden>0</span></a><button class="bag-toggle" aria-label="Shopping bag"><span data-icon="bag"></span><span
+            class="bag-label" data-i18n="bag">Bag</span><span class="bag-count">0</span></button>
+      </div>
+    </div>
+    <nav id="mobile-navigation" class="mobile-nav" aria-label="Mobile navigation" hidden>
+      <!-- Language Selection Bar -->
+      <div class="mobile-nav-lang-bar">
+        <span class="mobile-nav-lang-label" data-i18n="language">Language / ភាសា</span>
+        <div class="mobile-nav-lang-toggle" role="group" aria-label="Language selection">
+          <button type="button" class="mobile-lang-btn active" data-lang="en">EN</button>
+          <button type="button" class="mobile-lang-btn" data-lang="km">ខ្មែរ</button>
+        </div>
+      </div>
+
+      <!-- Quick Search Bar -->
+      <div class="mobile-nav-search-bar">
+        <form class="mobile-nav-search-form" role="search">
+          <span class="mobile-nav-search-icon" data-icon="search"></span>
+          <input type="search" class="mobile-nav-search-input" placeholder="Search products, rituals…"
+            aria-label="Search collection">
+          <button type="submit" class="mobile-nav-search-submit" aria-label="Submit search">
+            <span data-icon="arrow"></span>
+          </button>
+        </form>
+      </div>
+
+      <!-- Collection Categories Section -->
+      <div class="mobile-nav-section">
+        <span class="mobile-nav-eyebrow" data-i18n="theCollection">The Collection</span>
+        <div class="mobile-nav-links">
+          <a href="#home" class="mobile-nav-link">
+            <span class="mobile-nav-link-text" data-i18n="home">Home</span>
+            <span class="mobile-nav-pill">✦</span>
+          </a>
+          <a href="#shop" class="mobile-nav-link">
+            <span class="mobile-nav-link-text" data-i18n="shopAll">Shop all</span>
+            <span class="mobile-nav-pill">18</span>
+          </a>
+          <a href="#shop?category=skin-care" class="mobile-nav-link">
+            <span class="mobile-nav-link-text" data-i18n="skinCare">Skin Care</span>
+            <span class="mobile-nav-pill">04</span>
+          </a>
+          <a href="#shop?category=hair" class="mobile-nav-link">
+            <span class="mobile-nav-link-text" data-i18n="hairCare">Hair Care</span>
+            <span class="mobile-nav-pill">03</span>
+          </a>
+          <a href="#shop?category=body" class="mobile-nav-link">
+            <span class="mobile-nav-link-text" data-i18n="bodyCare">Body Care</span>
+            <span class="mobile-nav-pill">05</span>
+          </a>
+          <a href="#shop?category=makeup" class="mobile-nav-link">
+            <span class="mobile-nav-link-text" data-i18n="makeup">Makeup</span>
+            <span class="mobile-nav-pill">02</span>
+          </a>
+          <a href="#shop?category=fragrances" class="mobile-nav-link">
+            <span class="mobile-nav-link-text" data-i18n="fragrances">Fragrances</span>
+            <span class="mobile-nav-pill">01</span>
+          </a>
+          <a href="#shop?category=nail-care" class="mobile-nav-link">
+            <span class="mobile-nav-link-text" data-i18n="nailCare">Nail Care</span>
+            <span class="mobile-nav-pill">01</span>
+          </a>
+          <a href="#shop?category=sets" class="mobile-nav-link">
+            <span class="mobile-nav-link-text" data-i18n="setsAndRituals">Sets & Rituals</span>
+            <span class="mobile-nav-pill">02</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Experience & Curated Section -->
+      <div class="mobile-nav-section">
+        <span class="mobile-nav-eyebrow" data-i18n="experiences">Experiences</span>
+        <div class="mobile-nav-cards">
+          <a href="#routine" class="mobile-nav-feature-card">
+            <div class="mobile-nav-feature-icon" data-icon="leaf"></div>
+            <div class="mobile-nav-feature-body">
+              <strong data-i18n="buildYourShelf">Build your shelf</strong>
+              <span data-i18n="customRoutine">Curate a personalised daily ritual ↗</span>
+            </div>
+          </a>
+          <a href="#wishlist" class="mobile-nav-feature-card">
+            <div class="mobile-nav-feature-icon" data-icon="heart"></div>
+            <div class="mobile-nav-feature-body">
+              <strong data-i18n="savedProducts">Saved products</strong>
+              <span data-i18n="viewSaved">View items saved to your wishlist</span>
+            </div>
+            <span class="wishlist-count count-badge" hidden>0</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Client Services & Account -->
+      <div class="mobile-nav-section">
+        <span class="mobile-nav-eyebrow" data-i18n="accountCare">Account & Care</span>
+        <div class="mobile-nav-grid">
+          <a href="#account" class="mobile-nav-sublink">
+            <span data-icon="user"></span>
+            <span data-i18n="myAccount">My account</span>
+          </a>
+          <a href="#tracking" class="mobile-nav-sublink">
+            <span data-icon="truck"></span>
+            <span data-i18n="trackOrder">Track order</span>
+          </a>
+          <a href="#about" class="mobile-nav-sublink">
+            <span data-icon="sun"></span>
+            <span data-i18n="aboutLiva">About LIVA</span>
+          </a>
+          <a href="#contact" class="mobile-nav-sublink">
+            <span data-icon="support"></span>
+            <span data-i18n="helpContact">Help & contact</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Menu Footer Tagline -->
+      <div class="mobile-nav-footer">
+        <div class="mobile-nav-footer-brand">
+          <span>LIVA · The Daily Edit</span>
+          <span>USD $ · English</span>
+        </div>
+        <p>Personal care. Personally yours.</p>
+      </div>
+    </nav>
+    <div id="site-search" class="header-search" hidden>
+      <form id="search-form" class="container" role="search"><span data-icon="search"></span><input type="search"
+          id="header-search-input" name="q" placeholder="Shampoo, body wash, a little of both…"
+          aria-label="Search products"><button class="text-link" type="submit">Search <span
+            aria-hidden="true">→</span></button><button type="button" class="icon-button search-toggle"
+          aria-label="Close search" data-icon="close"></button></form>
+      <p class="container">Explore by <a href="#shop?category=hair">hair</a>, <a href="#shop?category=body">body</a> or
+        <a href="#shop?category=sets">sets</a>.
+      </p>
+    </div>
+  </header>
+  <main id="main-content" tabindex="-1">
+    <div id="app"></div>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-top container"><a href="#home" class="brand" aria-label="LIVA home"><span>LIVA</span><svg
+          viewBox="0 0 130 16" aria-hidden="true">
+          <path d="M3 13C35-12 80 29 127 1C83 39 39-1 3 13Z" fill="currentColor" />
+        </svg></a>
+      <p>Personal care.<br>Personally yours.</p><a href="#shop" class="footer-shop">Find your daily edit <span
+          aria-hidden="true">↗</span></a>
+    </div>
+    <div class="footer-main container">
+      <div class="footer-intro"><span class="eyebrow">THE DAILY EDIT</span>
+        <p>Hair. Body. Your everyday.<br>A little space for yourself.</p>
+        <p class="footer-currency">USD $ · English</p>
+      </div>
+      <div>
+        <h2>Shop</h2><a href="#shop?category=hair">Hair care</a><a href="#shop?category=body">Body care</a><a
+          href="#shop?category=sets">Sets</a><a href="#routine">Build your shelf</a>
+      </div>
+      <div>
+        <h2>Your LIVA</h2><a href="#wishlist">Saved products</a><a href="#account">Account & orders</a><a
+          href="#tracking">Track an order</a><a href="#compare">Compare products</a>
+      </div>
+      <div>
+        <h2>Good to know</h2><a href="#about">About LIVA</a><a href="#contact">Help & contact</a><a
+          href="#shipping">Delivery & returns</a><a href="#privacy">Privacy</a>
+      </div>
+    </div>
+    <div class="footer-bottom container"><span>© 2026 LIVA</span>
+      <p>Collection preview · Product imagery, sizes and prices are illustrative.</p><a href="#terms">About this
+        preview</a>
+    </div>
+  </footer>
+  <div id="overlay" class="overlay"></div>
+  <aside id="cart-drawer" class="cart-drawer" aria-label="Shopping bag" aria-hidden="true"></aside>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <noscript>
+    <p class="empty-state">Please enable JavaScript to explore the LIVA shopping prototype.</p>
+  </noscript>
+</body>
+
+</html>
